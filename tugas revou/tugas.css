@@ -1,0 +1,15 @@
+.nav1 {
+    background-color: aqua;
+    padding: 1px;
+    display: flex;
+    font-size: 20pt;
+    color: brown;
+}
+.nav2 {
+    background-color: blue;
+    padding: 1px;
+    justify-content: censter;
+    display: flex;
+    font-size: 30pt;
+    color: antiquewhite;
+}

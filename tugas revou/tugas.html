@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arham SYaukani </title>
+    <link rel="stylesheet" href="tugas.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <Nav class="nav1">
+        <div>Kalkulator Segitiga</div>
+    </Nav>
+    <nav class="nav2">
+        <div> Katik </div>
+    </nav>
+    <img src="segita.jpg" name="gambar">
+</body>
+<body>
+
+    <h2>Kalkulator Segitiga</h2>
+         <h3>Mencari Keliling Segitiga</h3>
+
+        <label for="sideA">Panjang Sisi A:</label>
+        <input type="number" id="sideA" placeholder="Masukkan panjang sisi A">
+
+        <label for="sideB">Panjang Sisi B:</label>
+        <input type="number" id="sideB" placeholder="Masukkan panjang sisi B">
+
+        <label for="sideC">Panjang Sisi C:</label>
+        <input type="number" id="sideC" placeholder="Masukkan panjang sisi C">
+
+        <button onclick="calculate()">Hitung</button>
+
+        <h3>Hasil:</h3>
+         <p id="result"></p>
+
+    <script>
+        function calculate() {
+            var sideA = parseFloat(document.getElementById("sideA").value);
+            var sideB = parseFloat(document.getElementById("sideB").value);
+            var sideC = parseFloat(document.getElementById("sideC").value);
+
+            if (isNaN(sideA) || isNaN(sideB) || isNaN(sideC)) {
+                document.getElementById("result").innerHTML = "Masukkan panjang sisi yang valid.";
+                return;
+            }
+
+            var perimeter = sideA + sideB + sideC;
+            var s = perimeter / 2; // Semiperimeter
+            var area = Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
+
+            document.getElementById("result").innerHTML = "Keliling: " + perimeter.toFixed(2);
+        }
+    </script>
+</body>
+<body>
+    <body>
+        <h2>Kalkulator Luas Segitiga</h2>
+    
+        <label for="base">Alas:</label>
+        <input type="number" id="base" placeholder="Masukkan panjang alas">
+    
+        <label for="height">Tinggi:</label>
+        <input type="number" id="height" placeholder="Masukkan tinggi">
+    
+        <button onclick="calculateArea()">Hitung Luas</button>
+    
+        <h3>Hasil Luas:</h3>
+        <p id="areaResult"></p>
+    
+        <script>
+            function calculateArea() {
+                var base = parseFloat(document.getElementById("base").value);
+                var height = parseFloat(document.getElementById("height").value);
+    
+                if (isNaN(base) || isNaN(height)) {
+                    document.getElementById("areaResult").innerHTML = "Masukkan panjang alas dan tinggi yang valid.";
+                    return;
+                }
+    
+                var area = 0.5 * base * height;
+    
+                document.getElementById("areaResult").innerHTML = "Luas Segitiga: " + area.toFixed(2);
+            }
+        </script>
+    
+    </body>
+    </html>
+</body>
+</html>
